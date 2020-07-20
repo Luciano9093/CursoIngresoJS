@@ -6,13 +6,48 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
+    var Largo;
+    var Ancho;
+    var RectanguloDeAlambre;
+    
+    Largo=txtIdLargo.value;
+    Largo=parseInt(Largo);
 
+    Ancho=txtIdAncho.value;
+    Ancho=parseInt(Ancho);
+
+    RectanguloDeAlambre=(6*Largo) + (6*Ancho);
+
+    alert("La cantidad de alambre para un terreno rectangular es de "+RectanguloDeAlambre+" mts.");
 }
 function Circulo () 
 {
-	
+    var Radio;
+    var CirculoDeAlambre;
+
+    Radio=txtIdRadio.value;
+    Radio=parseInt(Radio);
+    
+    CirculoDeAlambre=(6*Math.PI)*Radio;
+    
+    alert("La cantidad de alambre para un terreno circular es de "+CirculoDeAlambre+" mts.");
 }
+
 function Materiales () 
 {
-	
+	var Largo;
+    var Ancho;
+    var CantidadCemento;
+    var CantidadCal;
+    
+    Largo=txtIdLargo.value;
+    Largo=parseInt(Largo);
+
+    Ancho=txtIdAncho.value;
+    Ancho=parseInt(Ancho);
+
+    CantidadCemento=(Largo*Ancho)*2;
+    CantidadCal=(Largo*Ancho)*3;
+
+    alert("Se necesitaran "+CantidadCemento+" bolsas de cemento y "+CantidadCal+" bolsas de cal");
 }
