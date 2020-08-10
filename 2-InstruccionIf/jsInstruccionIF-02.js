@@ -1,3 +1,6 @@
+// Stancanello, Luciano Darío Daniel.
+// Al ingresar una edad debemos informar solo si la persona es mayor de edad.
+
 function mostrar()
 {
 	var Edad;

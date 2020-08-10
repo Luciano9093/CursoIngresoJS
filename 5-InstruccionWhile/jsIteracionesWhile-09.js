@@ -1,4 +1,5 @@
-/*
+/* Stancanello, Luciano Darío Daniel.
+
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
@@ -8,14 +9,34 @@ function mostrar()
 	var numeroMaximo;
 	var numeroMinimo;
 	var respuesta;
-	//iniciar variables
-	banderaDelPrimero="es el primero";
-	respuesta='si';
+
+	banderaDelPrimero=1;
+	respuesta="si";
+
 	while(respuesta=="si")
 	{
+		numeroIngresado=prompt("Ingrese un número:");
+		numeroIngresado=parseInt(numeroIngresado);
 		
-		respuesta=prompt("desea continuar?");
+		if(banderaDelPrimero==1)
+		{
+			banderaDelPrimero=0;
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+		}
+		else
+		{
+			if(numeroIngresado>numeroMaximo)
+			{
+				numeroMaximo=numeroIngresado;
+			}
+			if(numeroIngresado<numeroMinimo)
+			{
+				numeroMinimo=numeroIngresado;
+			}
+		}
+		respuesta=prompt("Desea ingresar otro número?");			
 	}
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN

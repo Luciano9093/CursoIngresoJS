@@ -3,66 +3,67 @@ A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
+
+
 function Sumar () 
-{
-    var ProductoUno;
-    var ProductoDos;
-    var ProductoTres;
-    var Suma;
+{      
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var suma;
 
-    ProductoUno=txtIdPrecioUno.value;
-    ProductoUno=parseInt(ProductoUno);
+    precioUno=txtIdPrecioUno.value;
+    precioUno=parseFloat(precioUno);
 
-    ProductoDos=txtIdPrecioDos.value;
-    ProductoDos=parseInt(ProductoDos);
+    precioDos=txtIdPrecioDos.value;
+    precioDos=parseFloat(precioDos);
 
-    ProductoTres=txtIdPrecioTres.value;
-    ProductoTres=parseInt(ProductoTres);
+    precioTres=txtIdPrecioTres.value;    
+    precioTres=parseFloat(precioTres);
 
-    Suma=ProductoUno+ProductoDos+ProductoTres;
+    suma=precioUno+precioDos+precioTres;
 
-
-alert("La suma de los productos es igual a "+Suma);
+    alert("La suma de los números ingresados es $"+suma);
 }
 function Promedio () 
-{
-    var ProductoUno;
-    var ProductoDos;
-    var ProductoTres;
-    var Promedio;
-    
-    ProductoUno=txtIdPrecioUno.value;
-    ProductoUno=parseInt(ProductoUno);
-    
-    ProductoDos=txtIdPrecioDos.value;
-    ProductoDos=parseInt(ProductoDos);
-    
-    ProductoTres=txtIdPrecioTres.value;
-    ProductoTres=parseInt(ProductoTres);
-    
-    Promedio=(ProductoUno+ProductoDos+ProductoTres)/3;
-    
-    
-    alert("El precio promedio de los productos es igual a "+Promedio);
+{    
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var suma;
+
+    precioUno=txtIdPrecioUno.value;
+    precioUno=parseFloat(precioUno);
+
+    precioDos=txtIdPrecioDos.value;
+    precioDos=parseFloat(precioDos);
+
+    precioTres=txtIdPrecioTres.value;    
+    precioTres=parseFloat(precioTres);
+
+    suma=precioUno+precioDos+precioTres;
+
+    alert("El precio promedio de los productos es igual a $"+(suma/3));
 }
 function PrecioFinal () 
 {
-    var ProductoUno;
-    var ProductoDos;
-    var PrecioFinal;
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var suma;
 
-    ProductoUno=txtIdPrecioUno.value;
-    ProductoUno=parseInt(ProductoUno);
-    
-    ProductoDos=txtIdPrecioDos.value;
-    ProductoDos=parseInt(ProductoDos);
-    
-    ProductoTres=txtIdPrecioTres.value;
-    ProductoTres=parseInt(ProductoTres);
+    precioUno=txtIdPrecioUno.value;
+    precioUno=parseFloat(precioUno);
 
-    PrecioFinal=(ProductoUno+ProductoDos+ProductoTres)*1.21
+    precioDos=txtIdPrecioDos.value;
+    precioDos=parseFloat(precioDos);
 
-    alert("El precio precio final de los productos es igual a "+PrecioFinal);
+    precioTres=txtIdPrecioTres.value;    
+    precioTres=parseFloat(precioTres);
+
+    suma=precioUno+precioDos+precioTres;
+
+    alert("El precio precio final de los productos es igual a $"+(suma+(suma*0.21)));
 }
 
 
